@@ -1,0 +1,27 @@
+{
+  "name": "nesspersist",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StudentsNCL/nesspersist.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/StudentsNCL/nesspersist/issues"
+  },
+  "homepage": "https://github.com/StudentsNCL/nesspersist",
+  "dependencies": {
+    "body-parser": "^1.9.2",
+    "express": "^4.10.2",
+    "express-session": "^1.9.1",
+    "mongoose": "^3.8.19",
+    "nessjs": "https://github.com/StudentsNCL/nessjs/tarball/master"
+  }
+}
