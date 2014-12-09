@@ -1,25 +1,19 @@
 var ness = require('nessjs');
 
 module.exports = function (req, res, next) {
-    if (!req.session.user || !req.session.user.id) {
-        if(req.body.cookie){
-            getUser(req.body.cookie, function(err, user){
-                if(err){
-                    res.sendStatus(401);
-                }
-                else{
-                    req.session.user = user;
-                    next();
-                }
-            });
-        }
-        else{
-            return res.sendStatus(401);
-        }
+    if(req.body.cookie){
+        getUser(req.body.cookie, function(err, user){
+            if(err){
+                res.sendStatus(401);
+            }
+            else{
+                req.session.user = user;
+                next();
+            }
+        });
     }
     else{
-        req.session.touch();
-        next();
+        return res.sendStatus(401);
     }
 }
 
